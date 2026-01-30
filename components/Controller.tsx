@@ -23,7 +23,7 @@ const Controller: React.FC = () => {
   const [stats, setStats] = useState<AudioStats | null>(null);
   const [worldInput, setWorldInput] = useState(defaultState.worldview);
   const [isProcessing, setIsProcessing] = useState(false);
-  const [sensitivity, setSensitivity] = useState(2.2);
+  const [sensitivity, setSensitivity] = useState(1.1);//オーディオ感度調整
   const audioEngine = useRef(new AudioEngine());
   const autoTimer = useRef<number | null>(null);
 
@@ -290,7 +290,8 @@ const Controller: React.FC = () => {
                  <span>{sensitivity.toFixed(1)}x</span>
                </div>
                <input 
-                  type="range" min="1.0" max="6.0" step="0.1" 
+                 //入力感度スライダーの範囲調整
+                  type="range" min="0.1" max="3.0" step="0.1" 
                   value={sensitivity}
                   onChange={e => setSensitivity(parseFloat(e.target.value))}
                   className="w-full h-1 bg-zinc-800 appearance-none cursor-pointer accent-zinc-500" 
