@@ -57,9 +57,10 @@ export class AudioEngine {
 
     this.analyser.getByteFrequencyData(this.dataArray);
 
-    const low = Math.min(1.0, (this.getAverage(0, 8) / 255) * sensitivity);
-    const mid = Math.min(1.0, (this.getAverage(9, 60) / 255) * sensitivity);
-    const high = Math.min(1.0, (this.getAverage(61, 200) / 255) * sensitivity);
+    // getStats メソッド内の計算部分を少し抑制
+    const low = Math.min(1.0, (this.getAverage(0, 8) / 255) * sensitivity * 0.8); // 係数 0.8 を追加
+    const mid = Math.min(1.0, (this.getAverage(9, 60) / 255) * sensitivity * 0.8);
+    const high = Math.min(1.0, (this.getAverage(61, 200) / 255) * sensitivity * 0.8);
 
     const now = performance.now();
     let isKick = false;
