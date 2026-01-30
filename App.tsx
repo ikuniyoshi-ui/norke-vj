@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import Visualizer from './components/Visualizer';
 import Controller from './components/Controller';
@@ -16,15 +15,14 @@ const App: React.FC = () => {
         setMode('control');
       }
     };
-
     window.addEventListener('hashchange', handleHashChange);
-    handleHashChange(); // Initial check
-
+    handleHashChange();
     return () => window.removeEventListener('hashchange', handleHashChange);
   }, []);
 
   return (
-    <main className="min-h-screen">
+    // 修正: min-h-screen ではなく h-screen にして画面の高さを確定させます
+    <main className="h-screen w-screen overflow-hidden bg-black">
       {mode === 'output' ? (
         <Visualizer />
       ) : (
