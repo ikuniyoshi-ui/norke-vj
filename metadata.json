@@ -1,0 +1,7 @@
+{
+  "name": "norké VJ Tool",
+  "description": "A browser-based, offline-capable generative VJ tool for norké (Techno/Ambient/Experimental Bass) featuring real-time audio analysis and custom GLSL shaders.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
