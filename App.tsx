@@ -21,8 +21,8 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    // 修正: min-h-screen ではなく h-screen にして画面の高さを確定させます
-    <main className="h-screen w-screen overflow-hidden bg-black">
+    // 修正: h-screen w-screen で画面全体を黒いキャンバスとして確保します
+    <main className="h-screen w-screen overflow-hidden bg-black text-white">
       {mode === 'output' ? (
         <Visualizer />
       ) : (
