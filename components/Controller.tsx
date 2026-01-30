@@ -178,7 +178,7 @@ const Controller: React.FC = () => {
     <div className="p-6 max-w-6xl mx-auto space-y-6 bg-black min-h-screen text-zinc-100 selection:bg-cyan-500 selection:text-black">
       <header className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-zinc-900 pb-8 gap-4">
         <div>
-          <h1 className="text-7xl font-black tracking-tighter italic uppercase leading-none text-white">norké VJ</h1>
+          <h1 className="text-7xl font-black tracking-tighter italic leading-none text-white">norké VJ System</h1>
           <p className="text-zinc-600 text-[10px] uppercase tracking-[0.7em] mt-4 font-black">Generative Sync Engine // v2.9</p>
         </div>
         
